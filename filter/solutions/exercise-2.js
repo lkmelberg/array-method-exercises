@@ -13,26 +13,26 @@ set your .filter results to this variable.
 
 const users = [
   {
-    firstName: 'Ola',
-    lastName: 'Nordmann',
+    firstName: "Ola",
+    lastName: "Nordmann",
     isAdmin: true,
     isVerified: false,
   },
   {
-    firstName: 'Kari',
-    lastName: 'Nordmann',
+    firstName: "Kari",
+    lastName: "Nordmann",
     isAdmin: true,
     isVerified: true,
   },
   {
-    firstName: 'Jan',
-    lastName: 'Nordmann',
+    firstName: "Jan",
+    lastName: "Nordmann",
     isAdmin: true,
     isVerified: true,
   },
   {
-    firstName: 'Nora',
-    lastName: 'Nordmann',
+    firstName: "Nora",
+    lastName: "Nordmann",
     isAdmin: false,
     isVerified: false,
   },
@@ -42,7 +42,9 @@ const filteredUsers = users.filter((user) => user.isAdmin && user.isVerified);
 
 // We can destructure the properties to make the code more concise
 const filteredUsersDestructured = users.filter(
-  ({ isAdmin, isVerified }) => isAdmin && isVerified,
+  ({ isAdmin, isVerified }) => isAdmin && isVerified
 );
 
 console.log(filteredUsers);
+
+console.log(filteredUsersDestructured);

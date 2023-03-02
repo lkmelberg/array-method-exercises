@@ -13,31 +13,37 @@ set your .filter results to this variable.
 
 const users = [
   {
-    firstName: 'Ola',
-    lastName: 'Nordmann',
+    firstName: "Ola",
+    lastName: "Nordmann",
     isAdmin: true,
     isVerified: false,
   },
   {
-    firstName: 'Kari',
-    lastName: 'Nordmann',
+    firstName: "Kari",
+    lastName: "Nordmann",
     isAdmin: true,
     isVerified: true,
   },
   {
-    firstName: 'Jan',
-    lastName: 'Nordmann',
+    firstName: "Jan",
+    lastName: "Nordmann",
     isAdmin: true,
     isVerified: true,
   },
   {
-    firstName: 'Nora',
-    lastName: 'Nordmann',
+    firstName: "Nora",
+    lastName: "Nordmann",
     isAdmin: false,
     isVerified: false,
   },
 ];
 
-const filteredUsers = null; // Replace null and add .filter code here
+// const filteredUsers = users.filter(
+//   (user) => user.isAdmin === true && user.isVerified === true
+// );
+
+const filteredUsers = users.filter((user) => {
+  if (user.isAdmin === true && user.isVerified === true) return true;
+});
 
 console.log(filteredUsers);
